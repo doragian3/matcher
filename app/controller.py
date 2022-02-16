@@ -81,7 +81,7 @@ def add_candidate_control(title, skills_ids):
 def candidate_finder_control(job_id):
     """
     Searching candidate match
-    :param job_id: str
+    :param job_id: int
     :return: jsonify result
     """
     try:
