@@ -13,7 +13,7 @@ def index():
 def add_skill():
     try:
         skill_name = request.json.get('name')
-        return controller.add_skill_control(skill_name)
+        return controller.add_skill_control(skill_name.lower())
 
     except Exception as ex:
         return jsonify("skill name argument don't exists")
@@ -24,7 +24,7 @@ def add_job():
     try:
         title = request.json.get('title')
         skill_id = request.json.get('skill_id')
-        return controller.add_job_control(title, skill_id)
+        return controller.add_job_control(title.lower(), skill_id)
 
     except Exception as ex:
         return jsonify("jobs arguments missing")
@@ -35,7 +35,7 @@ def add_candidate():
     try:
         title = request.json.get('title')
         skills_ids = request.json.get('skills_ids')
-        return controller.add_candidate_control(title, skills_ids)
+        return controller.add_candidate_control(title.lower(), skills_ids)
     except Exception as ex:
         return jsonify("candidate arguments missing")
 
