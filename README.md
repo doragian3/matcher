@@ -1,11 +1,14 @@
-# matcher
+# Matcher app
 This is matcher job app
 Writing with flask and SQLAlchemy
 
 Objects:
   Skill
+  
   candidate
+  
   Job
+
 Table for each object and Association table candidate_skills - between Candidate skills to skill table 
 
 
